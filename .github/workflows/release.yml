@@ -28,11 +28,11 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Save chaos-mesh
-        run: docker pull ghcr.io/chaos-mesh/chaos-mesh:v2.4.1; docker save ghcr.io/chaos-mesh/chaos-mesh:v2.4.1 -o chaos-mesh.tar.gz
+        run: docker pull ghcr.io/chaos-mesh/chaos-mesh:v2.4.2; docker save ghcr.io/chaos-mesh/chaos-mesh:v2.4.2 -o chaos-mesh.tar.gz
       - name: Save chaos-daemon
-        run: docker pull ghcr.io/chaos-mesh/chaos-daemon:v2.4.1; docker save ghcr.io/chaos-mesh/chaos-daemon:v2.4.1 -o chaos-daemon.tar.gz
+        run: docker pull ghcr.io/chaos-mesh/chaos-daemon:v2.4.2; docker save ghcr.io/chaos-mesh/chaos-daemon:v2.4.2 -o chaos-daemon.tar.gz
       - name: Save chaos-dashboard
-        run: docker pull ghcr.io/chaos-mesh/chaos-dashboard:v2.4.1; docker save ghcr.io/chaos-mesh/chaos-dashboard:v2.4.1 -o chaos-dashboard.tar.gz
+        run: docker pull ghcr.io/chaos-mesh/chaos-dashboard:v2.4.2; docker save ghcr.io/chaos-mesh/chaos-dashboard:v2.4.2 -o chaos-dashboard.tar.gz
       - uses: dev-drprasad/delete-tag-and-release@v0.2.0
         with:
           delete_release: true
