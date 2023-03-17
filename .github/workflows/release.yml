@@ -33,7 +33,7 @@ jobs:
         run: docker pull ghcr.io/chaos-mesh/chaos-daemon:v2.4.2; docker save ghcr.io/chaos-mesh/chaos-daemon:v2.4.2 -o chaos-daemon.tar.gz
       - name: Save chaos-dashboard
         run: docker pull ghcr.io/chaos-mesh/chaos-dashboard:v2.4.2; docker save ghcr.io/chaos-mesh/chaos-dashboard:v2.4.2 -o chaos-dashboard.tar.gz
-      - uses: dev-drprasad/delete-tag-and-release@v0.2.0
+      - uses: dev-drprasad/delete-tag-and-release@v0.2.1
         with:
           delete_release: true
           tag_name: latest_docker_image
